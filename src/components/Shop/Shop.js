@@ -10,8 +10,9 @@ import Product from "../Product/Product";
 import "./Shop.css";
 
 const Shop = () => {
-  const products = useLoaderData();
+  const { products, count } = useLoaderData();
   const [cart, setCart] = useState([]);
+  const perPage = 10;
 
   const clearCart = () => {
     setCart([]);
